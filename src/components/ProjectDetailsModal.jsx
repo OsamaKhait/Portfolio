@@ -150,6 +150,7 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         </span>
                         {projectDetails?.date}
                       </li>
+                      {projectDetails?.urls?.length > 0 && (
                       <li>
                         <span
                           className={
@@ -159,14 +160,22 @@ const ProjectDetailsModal = ({ darkTheme, projectDetails }) => {
                         >
                           URL:
                         </span>
-                        <a
-                          href={projectDetails?.url?.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {projectDetails?.url?.name}
-                        </a>
+                        {projectDetails.urls.map((urlItem, index) => (
+                          <span key={index}>
+                            <a
+                              href={urlItem.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-yellow-500 hover:underline"
+                            >
+                              {urlItem.name}
+                            </a>
+                            {index < projectDetails.urls.length - 1 && ", "}
+                          </span>
+                        ))}
                       </li>
+                    )}
+
                     </ul>
                     <div className="row no-gutters align-items-center">
                       <div

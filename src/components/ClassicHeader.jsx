@@ -51,7 +51,6 @@ const ClassicHeader = ({ handleNavClick }) => {
               }}
             >
               {" "}
-              <img src="images/logo-light.png" alt="Osama" />{" "}
             </Link>
             {/* Logo End */}
           </div>
@@ -189,7 +188,7 @@ const ClassicHeader = ({ handleNavClick }) => {
           <div className="col-auto col-lg-2 d-flex justify-content-end">
             <ul className="social-icons social-icons-light">
               <li className="social-icons-github">
-                <Tooltip text="Twitter" placement="top">
+                <Tooltip text="Github" placement="top">
                   <a
                     href="https://github.com/Osamakhait"
                     target="_blank"
@@ -200,7 +199,7 @@ const ClassicHeader = ({ handleNavClick }) => {
                 </Tooltip>
               </li>
               <li className="social-icons-linkedin">
-                <Tooltip text="Github" placement="top">
+                <Tooltip text="Linkedin" placement="top">
                   <a
                     href="https://www.linkedin.com/in/osamakhait/"
                     target="_blank"

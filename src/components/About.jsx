@@ -75,27 +75,31 @@ const AboutUs = ({ classicHeader, darkTheme }) => {
                   <span className="fw-600 me-2">Adresse:</span>Annecy, France
                 </li> 
               </ul>
-              <a
-                href={resumeFile}
-                download
-                className="btn btn-primary rounded-pill"
-              >
-                Télécharger CV
-              </a>
-              <a
-                href={CompetencesFile}
-                download
-                className="btn btn-primary rounded-pill"
-              >
-                Tableau de Compétences
-              </a>
-              <a
-                href={VeilleTechFile}
-                download
-                className="btn btn-primary rounded-pill"
-              >
-                Veille Technologique
-              </a>
+              <div className="d-flex flex-column align-items-center gap-3 mt-4">
+  <a
+    href={resumeFile}
+    download
+    className="btn btn-primary rounded-pill px-4"
+  >
+    Télécharger CV
+  </a>
+  <a
+    href={CompetencesFile}
+    download
+    className="btn btn-primary rounded-pill px-4"
+  >
+    Tableau de Compétences
+  </a>
+  <a
+    href={VeilleTechFile}
+    download
+    className="btn btn-primary rounded-pill px-4"
+  >
+    Veille Technologique
+  </a>
+</div>
+
+
             </div>
           </div>
           {/* about me personal details end */}

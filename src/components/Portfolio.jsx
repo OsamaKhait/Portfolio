@@ -10,17 +10,21 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
   const [selectedProjectDetails, setSelectedProjectDetails] = useState();
 
   const filters = {
+    DEV: "developpement",
     DESIGN: "traitement_donnees",
     BRAND: "reseaux",
     PHOTOS: "electronique",
   };
   
+  
   const filterLabels = {
     "*": "Tous",
+    developpement: "Développement",
     traitement_donnees: "Traitement des données",
     reseaux: "Réseaux",
     electronique: "Électronique",
   };
+  
 
   const projectsData = [
     {
@@ -30,10 +34,12 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       technologies: "Raspberry, HTML5, CSS3, , Python, PHP",
       industry: "Développement informatique",
       date: "Juillet 2022",
-      url: {
-        name: "Github",
-        link: "https://github.com/OsamaKhait/thales/tree/main/thales",
-      },
+      urls: [
+        {
+          name: "GitHub",
+          link: "https://github.com/OsamaKhait/thales/tree/main/thales",
+        },
+      ],
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/osamakhait/",
         github: "https://github.com/OsamaKhait",
@@ -53,10 +59,12 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       technologies: "Routage dynamique, NAT, OSPF, VLAN, ACL",
       industry: "Réseau et télécomunication",
       date: "Mai, 2023",
-      url: {
-        name: "Rapport (Google docs)",
+      urls: [
+        {
+          name: "Rapport (Google docs)",
         link: "https://docs.google.com/document/d/1ZvCayv-F0kqDzLrJ06BWDxTrnOiVh13xEMGs92leTMs/edit?usp=sharing",
       },
+      ],
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/osamakhait/",
         github: "https://github.com/OsamaKhait",
@@ -75,10 +83,12 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       client: "Mahad WAIS",
       industry: "Cablage",
       date: "Janvier 2023",
-      url: {
-        name: "Rapport (Google docs)",
+      urls: [
+        {
+          name: "Rapport (Google docs)",
         link: "https://docs.google.com/document/d/16nTRnTXS6JYOHTk97b1YcCbire9qsshxzGIu45SZzEU/edit?usp=sharing",
       },
+      ],
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/osamakhait/",
         github: "https://github.com/OsamaKhait",
@@ -98,10 +108,12 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       technologies: "Raspberry, HTML5, CSS3, , Python, PHP",
       industry: "Développement informatique",
       date: "Juillet 2023",
-      url: {
-        name: "Github",
+      urls: [
+        {
+          name: "Github",
         link: "https://github.com/OsamaKhait/Sniffer-Ethernet",
       },
+    ],
       socialLinks: {
         linkedin: "https://www.linkedin.com/in/osamakhait/",
         github: "https://github.com/OsamaKhait",
@@ -120,42 +132,50 @@ const Portfolio = ({ classicHeader, darkTheme }) => {
       technologies: "Symfony, PHP, MySQL, HTML, CSS",
       industry: "Développement web",
       date: "2024",
-      url: {
-        name: "Documentation",
-        link: "https://docs.google.com/document/d/1jA6X5kclVBzt-jrvUeE11Hzhp8-bQUAKPcFcFJlW_i4/edit?usp=sharing",
-      },
+      urls: [
+        {
+          name: "Documentation",
+          link: "https://docs.google.com/document/d/1jA6X5kclVBzt-jrvUeE11Hzhp8-bQUAKPcFcFJlW_i4/edit?usp=sharing",
+        },
+        {
+          name: "Github",
+          link: "https://github.com/OsamaKhait/GsbFrais",
+        },
+      ],      
       socialLinks: {
-        github: "https://github.com/OsamaKhait/GsbFrais",
+        github: "https://github.com/OsamaKhait/OsamaKhait/",
         linkedin: "https://www.linkedin.com/in/osamakhait/",
         mail: "mailto:osama@khait.fr",
       },
-      thumbImage: "images/projects/project-4.jpg", // à adapter avec le bon visuel
+      thumbImage: "images/projects/gsbfrais.png", // à adapter avec le bon visuel
       sliderImages: [
-        "images/projects/gsb-frais.jpg",
+        "images/projects/",
       ],
-      categories: [filters.DESIGN],
+      categories: [filters.DEV],
     },
     {
-      title: "GSB-Visite",
+      title: "GSB-Mobile",
       projectInfo:
-        "GSB-Visite est une application Android développée pour les visiteurs médicaux de GSB, entreprise pharmaceutique fictive. Elle permet l’authentification sécurisée des utilisateurs, la consultation des praticiens, la création et modification de rapports de visite, ainsi que l’accès à l’historique des visites. Conçue selon l’architecture MVC, elle utilise Retrofit pour communiquer avec une API REST sécurisée, échangeant des données au format JSON. Chaque visite suit un cycle complet (création, modification, consultation, archivage), et l’accès est contrôlé par un système d’authentification par token.",
+        "GSB-Mobile est une application Android développée pour les visiteurs médicaux de GSB, entreprise pharmaceutique fictive. Elle permet l’authentification sécurisée des utilisateurs, la consultation des praticiens, la création et modification de rapports de visite, ainsi que l’accès à l’historique des visites. Conçue selon l’architecture MVC, elle utilise Retrofit pour communiquer avec une API REST sécurisée, échangeant des données au format JSON. Chaque visite suit un cycle complet (création, modification, consultation, archivage), et l’accès est contrôlé par un système d’authentification par token.",
       technologies: "Android, Java, Retrofit, API REST, JSON",
       industry: "Développement mobile",
       date: "2024",
-      url: {
-        name: "Github",
+      urls: [
+        {
+          name: "Github",
         link: "https://github.com/OsamaKhait/GSB-Visite",
       },
+    ],
       socialLinks: {
         github: "https://github.com/OsamaKhait",
         linkedin: "https://www.linkedin.com/in/osamakhait/",
         mail: "mailto:osama@khait.fr",
       },
-      thumbImage: "images/projects/project-4.jpg", // à adapter avec le bon visuel
+      thumbImage: "images/projects/gsbmobile.png", // à adapter avec le bon visuel
       sliderImages: [
         "images/projects/gsb-visite.jpg",
       ],
-      categories: [filters.DESIGN],
+      categories: [filters.DEV],
     },
     
     
